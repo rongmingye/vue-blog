@@ -1,3 +1,5 @@
+<!-- 主页布局结构 -->
+
 <template>
   <div id="app">
     <el-container>

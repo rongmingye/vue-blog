@@ -1,3 +1,5 @@
+<!-- about.vue 关于我们页面 -->
+
 <template>
 	<div id="about">
 		<div class="about-me">

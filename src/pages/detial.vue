@@ -1,3 +1,5 @@
+<!-- detial.vue 详细页面 -->
+
 <template>
 	<div id="detial">
 		<div class="title">

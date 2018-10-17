@@ -1,5 +1,7 @@
+<!-- manage.vue 管理页面 -->
+
 <template>
-	<div>
+	<div id="manage">
 		<div class="clearfix">
 			<el-tabs v-model="activeName" @tab-click="handleTab" style="width:100px; float: left">
 			    <el-tab-pane label="文章" name="article"></el-tab-pane>

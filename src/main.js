@@ -7,9 +7,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false;
 
-Vue.use(ElementUI);
+Vue.use(ElementUI); // 使用element-ui库
 
-Vue.prototype.$http = axios;
+Vue.prototype.$http = axios; // 使用axios进行请求
 
 new Vue({
   router,

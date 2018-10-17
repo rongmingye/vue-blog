@@ -1,3 +1,5 @@
+<!-- talk.vue 啐言啐语页面 -->
+
 <template>
 	<div>
 		<div v-for="item in articleList">
@@ -34,7 +36,6 @@
 				})
 			}
 		}
-
 	}
 </script>
 

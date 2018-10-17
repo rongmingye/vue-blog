@@ -1,3 +1,5 @@
+<!-- publishColletion.vue 发布收藏页面 -->
+
 <template>
 	<div id="publishColletion">
 		<el-form :model="form" label-width="80px" :rules="rules" ref="publishForm">

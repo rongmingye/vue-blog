@@ -2,15 +2,15 @@ let express = require('express');
 let app = express();
 let cors = require('cors');
 
+let router = require('./serve/router.js');
+let routerManage = require('./serve/routerManage.js');
+
 app.use(cors({
     credentials: true, 
     origin: "http://localhost:8080" 
 }));
 
 app.use(express.static(__dirname));
-
-let router = require('./serve/router.js');
-let routerManage = require('./serve/routerManage.js');
 router(app);
 routerManage(app);
 

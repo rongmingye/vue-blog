@@ -1,3 +1,4 @@
+<!-- home.uve 首页 -->
 <template>
 	<div>
 		<div v-for="item in articleList">

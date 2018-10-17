@@ -1,3 +1,5 @@
+<!-- colletion.vue 收藏页面 -->
+
 <template>
 	<div id="colletion">
 		<ul>

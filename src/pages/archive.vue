@@ -1,3 +1,5 @@
+<!-- archive.vue 文章归档页面 -->
+
 <template>
 	<div id="archive">
 		<ul>

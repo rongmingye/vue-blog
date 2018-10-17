@@ -1,3 +1,5 @@
+<!-- publicArticle.vue 发布文章页面 -->
+
 <template>
 	<div id="publishArticle">
 		<el-form :model="form" label-width="80px" :rules="rules" ref="publishForm">
