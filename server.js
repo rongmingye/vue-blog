@@ -7,7 +7,7 @@ let cors = require('cors');
 let router = require('./serve/router.js');
 let routerManage = require('./serve/routerManage.js');
 
-app.use(cors({
+ app.use(cors({
     credentials: true, 
     origin: "http://localhost:8080" 
 }));
