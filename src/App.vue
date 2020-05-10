@@ -4,9 +4,9 @@
   <div id="app">
     <el-container>
       <el-header class="header">
-         <Header />
+        <Header />
       </el-header>
-      
+
       <el-container style="margin: 80px 100px 0 100px;">
         <el-main width="800px">
           <router-view></router-view>
@@ -17,29 +17,28 @@
         </el-aside>
       </el-container>
 
-      <el-footer style="text-align: center; font-size: 12px;" >
-         <Footer />
+      <el-footer style="text-align: center; font-size: 12px;">
+        <Footer />
       </el-footer>
-      
     </el-container>
   </div>
 </template>
 
 <script>
-import Header from './components/header.vue'
-import Footer from './components/footer.vue'
-import Hot from './components/hot.vue'
+import Header from "./components/header.vue";
+import Footer from "./components/footer.vue";
+import Hot from "./components/hot.vue";
 
 export default {
-  name: 'app',
-  components: {Header, Footer, Hot}
-}
+  name: "app",
+  components: { Header, Footer, Hot }
+};
 </script>
 
 <style>
 #app {
 }
-.header{
+.header {
   position: fixed;
   z-index: 9999;
   width: 100%;
@@ -49,7 +48,7 @@ export default {
   box-shadow: 0 1px 1px #ccc;
   background: #fff;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 </style>

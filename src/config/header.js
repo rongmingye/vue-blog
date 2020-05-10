@@ -1,0 +1,33 @@
+import Qs from 'qs'
+import env from './env.js'
+
+export let header = {
+    baseURL: env.serveHost,
+    transformRequest: [function (data) {
+        data = Qs.stringify(data)
+        return data;
+    }],
+    transformResponse: [function (data) {
+        return data
+    }],
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    timeout: 60*1000*5, // 5分钟
+    responseType: 'json'
+};
+
+export let header_file = {
+    baseURL: env.serveHost,
+    transformRequest: [function (data) {
+        return data;
+    }],
+    transformResponse: [function (data) {
+        return data
+    }],
+    headers: {
+        'Content-Type': 'multipart/form-data',
+    },
+    timeout: 60*1000*30, // 30分钟
+    responseType: 'json'
+}

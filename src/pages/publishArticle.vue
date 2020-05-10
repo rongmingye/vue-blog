@@ -3,12 +3,12 @@
 <template>
 	<div id="publishArticle">
 		<el-form :model="form" label-width="80px" :rules="rules" ref="publishForm">
-			<el-form-item label="文章标题" prop="art_title">
-			    <el-input v-model="form.art_title"></el-input>
+			<el-form-item label="文章标题" prop="title">
+			    <el-input v-model="form.title"></el-input>
 			</el-form-item>
 
-			<el-form-item label="文章描述" prop="art_desc">
-			    <el-input type="textarea" v-model="form.art_desc" rows="5"></el-input>
+			<el-form-item label="文章描述" prop="description">
+			    <el-input type="textarea" v-model="form.description" rows="5"></el-input>
 			</el-form-item>
 
 			<el-form-item label="文章类型" prop="art_type">
@@ -22,8 +22,8 @@
     			<el-switch v-model="form.is_hot"></el-switch>
   			</el-form-item>
 
-			<el-form-item label="文章内容" prop="art_content">
-			    <el-input type="textarea" v-model="form.art_content" rows="50"></el-input>
+			<el-form-item label="文章内容" prop="content">
+			    <el-input type="textarea" v-model="form.content" rows="50"></el-input>
 			</el-form-item>
 			
 			<el-form-item label="文章标签" prop="tags">
@@ -43,7 +43,7 @@
 	import {publishArticle} from '../config/api.js'
 	import {getArticleById} from '../config/api.js'
 	import {updateArticle} from '../config/api.js'
-	import {danyinhao} from '../config/util.js'
+	import {danyinhao} from '../common/util.js'
 
 	export default {
 		mounted: function(){
@@ -56,17 +56,17 @@
 		data(){
 			return {
 				form:{
-					art_title: "",
-					art_desc: "",
-					art_content: "",
+					title: "",
+					description: "",
+					content: "",
 					art_type: "",
 					is_hot: true,
 					tags: ""
 				},
 				rules: {
-					art_title: [{required: true, message: '请输入标题'}],
-					art_desc: [{required: true, message: '请输入描述'}],
-					art_content: [{required: true, message: '请输入内容'}],
+					title: [{required: true, message: '请输入标题'}],
+					description: [{required: true, message: '请输入描述'}],
+					content: [{required: true, message: '请输入内容'}],
 					art_type: [{required: true, message: '请输入类型'}],
 					tags: [{required: true, message: '请输入标签'}]
 				}
@@ -94,9 +94,9 @@
 			// 发布文章
 			publishArticle: function(){
 				var params = {
-					title: this.form.art_title,
-					desc: this.form.art_desc,
-					content: danyinhao(this.form.art_content),
+					title: this.form.title,
+					desc: this.form.description,
+					content: danyinhao(this.form.content),
 					type: this.form.art_type,
 					hot: this.form.is_hot,
 					tags: this.form.tags.indexOf(",") == -1? new Array(this.form.tags): this.form.tags.split(","),
@@ -126,9 +126,9 @@
 			updateArticle: function(){
 				var params = {
 					id: this.$route.query.id,
-					title: this.form.art_title,
-					desc: this.form.art_desc,
-					content: danyinhao(this.form.art_content),
+					title: this.form.title,
+					desc: this.form.description,
+					content: danyinhao(this.form.content),
 					type: this.form.art_type,
 					hot: this.form.is_hot,
 					tags: this.form.tags.indexOf(",") == -1? new Array(this.form.tags): this.form.tags.split(","),

@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html,body {
+    width:100%;
+    height: 100%;
+    background: #fff;
+    font-size: 12px;
+}
+
+input {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 3px;
+    padding: 2px;
+    color: grey;
+}
+
+input:focus {
+    border: 1px solid #0057ff;
+    box-shadow: 0 0 1px rgba(0, 87, 255, 0.8);
+}
+
+input:disabled {
+    background: rgba(240, 240, 240, 1);
+}
+
+textarea {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 18px;
+    max-height: 100px;
+    border-radius: 3px;
+    padding: 2px;
+    color: grey;
+}
+
+textarea:focus {
+    border: 1px solid rgb(0, 87, 255);
+    box-shadow: 0 0 1px rgba(0, 87, 255, 0.8);
+}
+
+textarea:disabled {
+    background: rgba(240, 240, 240, 1);
+}
+
+select {
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    border-radius: 2px;
+    margin: 2px;
+    font-size: 14px;
+    color: grey;
+}
+
+select:disabled {
+    background: rgba(240, 240, 240, 1)
+}
+
+button {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    width: auto;
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+    outline: none;
+}
+
+button:hover {
+    background: rgba(240, 240, 240, 1);
+}
+
+button:active {
+    background: rgba(200, 200, 200, 1);
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(205,205,205,1);
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(205,205,205,1);
+}
+
+*::-webkit-scrollbar-corner {
+    background: #ffffff;
+}
+
+ul, li {
+    text-decoration: none;    
+    list-style: none;
+}

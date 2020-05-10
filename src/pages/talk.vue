@@ -2,26 +2,27 @@
 
 <template>
 	<div>
-		<div v-for="item in articleList">
-			<articleLi v-bind:item="item" />
+		<div v-for="(item, index) in articleList" :key="index">
+			<articleItem :article="item" ></articleItem>
 		</div>
 	</div>
 </template>
 
 <script>
-	import {getArticleList} from '../config/api.js'
-	import articleLi from '../components/articleLi.vue'
+	import { getArticleList } from '../config/api.js'
+	import articleItem from '../components/articleItem.vue'
+	import mockJson from '../assets/articleList.json'
+
+
 	export default {
-		components: {articleLi},
+		components: {articleItem},
 		data(){
 			return {
-				articleList: []
+				articleList: mockJson.articleList
 			}
 		},
-		mounted: function(){
-			this.$nextTick(function(){
-				this.getArticles();
-			})
+		created: function(){
+			// this.getArticles();
 		},
 		methods: {
 			// 获取文章
@@ -30,7 +31,9 @@
 					type: "talk"
 				}
 				this.$http.post(getArticleList, params).then(res=>{
-					this.articleList = res.data.result;
+					if(res.code == 200) {
+						this.articleList = res.data.result;
+					}
 				}).catch(err=>{
 					console.log(err);
 				})
@@ -39,6 +42,6 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	
 </style>

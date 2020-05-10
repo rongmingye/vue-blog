@@ -2,7 +2,7 @@
 	<div class="clearfix" style="height: 100%;">
 		<h3 style="float: left; width: 20vw; font-size: 24px">O叶</h3>
 		<ul class="nav" style="float: left;">
-			<li v-for="(item, i) in nav" :class="{active: selectedIndex == i}" @click="selectNav(i)">
+			<li v-for="(item, index) in nav" :key="index" :class="{active: selectedIndex == index}" @click="selectNav(index)">
 				<router-link :to="item.path">{{item.title}}</router-link>		
 			</li>
 		</ul>
@@ -35,9 +35,9 @@
 		},
 		methods: {
 			// 选择nav, 记下其index
-			selectNav: function(i){
-				this.selectedIndex = i;
-				sessionStorage.setItem("selectedIndex", i);
+			selectNav: function(index){
+				this.selectedIndex = index;
+				sessionStorage.setItem("selectedIndex", index);
 			}
 		}
 	}

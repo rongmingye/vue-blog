@@ -4,8 +4,8 @@ let express = require('express');
 let app = express();
 let cors = require('cors');
 
-let router = require('./serve/router.js');
-let routerManage = require('./serve/routerManage.js');
+let router = require('./router.js');
+let routerManage = require('./routerManage.js');
 
  app.use(cors({
     credentials: true, 

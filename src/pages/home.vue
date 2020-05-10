@@ -1,8 +1,8 @@
 <!-- home.uve 首页 -->
 <template>
 	<div>
-		<div v-for="item in articleList">
-			<articleLi v-bind:item="item" />
+		<div v-for="(item, index) in articleList" :key="index">
+			<articleItem :article="item" ></articleItem>
 		</div>
 		<p style="text-align: center; height:50px; line-height: 50px; color:#999">
 			所有的文章已经被你看完了~
@@ -11,22 +11,20 @@
 </template>
 
 <script>
-import articleLi from '../components/articleLi.vue'
-import articleList from '../assets/articleList.json'
+import articleItem from '../components/articleItem.vue'
+import mockJson from '../assets/articleList.json'
 import {getArticleList} from '../config/api.js'
 
 export default {
 	name: 'home',
-	components: {articleLi},
+	components: { articleItem },
 	data(){
 		return {
-			articleList: articleList
+			articleList: mockJson.articleList
 		}
 	},
-	mounted: function(){
-		this.$nextTick(function(){
-			this.getArticles();
-		})
+	created: function() {
+		// this.getArticles();
 	},
 	methods: {
 		// 获取文章列表
@@ -44,6 +42,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

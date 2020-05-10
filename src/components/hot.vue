@@ -6,7 +6,7 @@
 			</div>
 			<div v-for="(item, i) in hotList">
 				<router-link :to="'/detial/'+item.id" class="text" >
-					<i>{{i+1}}</i> 、{{item.art_title}}
+					<i>{{i+1}}</i> 、{{item.title}}
 				</router-link>
 			</div>
 		</el-card>

@@ -1,0 +1,184 @@
+
+
+/* 按钮 */
+
+.ibtn_primary {
+    display: inline-block;
+    min-width: 86px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #007FFF;
+    color: #fff;
+    background-color: #007FFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ibtn_primary_plain_round {
+    display: inline-block;
+    min-width: 86px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 18px;
+    border: 1px solid #007FFF;
+    color: #007FFF;
+    background-color: #fff;
+}
+
+.ibtn_primary_plain {
+    display: inline-block;
+    min-width: 86px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #007FFF;
+    color: #007FFF;
+    background-color: #fff;
+}
+
+.ibtn_primary_plain_ms {
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #007FFF;
+    color: #007FFF;
+    background-color: #fff;
+}
+
+.ibtn_default {
+    display: inline-block;
+    min-width: 86px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #E4E7ED;
+    color: #606266;
+    background-color: #fff;
+}
+
+
+
+.form_value_text {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 4px;
+    color: #606266;
+    border: 1px solid #dcdfe6;
+}
+.form_value_areatext {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+    height: 100px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 4px;
+    color: #606266;
+    border: 1px solid #dcdfe6;
+    text-overflow: ellipsis;
+}
+
+/* 样式 */
+
+
+.float_left { float: left; }
+.float_right { float: right; }
+.clearfix { zoom: 1; }
+.clearfix::after { display: block; content: ""; clear: both; visibility: hidden; }
+
+.pl15 { padding-left: 15px; }
+.pr15 { padding-right: 15px; }
+.pt15 { padding-top: 15px; }
+.pb15 { padding-bottom: 15px; }
+
+.pl80 { padding-left: 80px; }
+
+.ml10 { margin-left: 10px; }
+.mr10 { margin-right: 10px; }
+.mt10 { margin-top: 10px; }
+.mb10 { margin-bottom: 10px; }
+
+.ml15 { margin-left: 15px; }
+.mr15 { margin-right: 15px; }
+.mt15 { margin-top: 15px; }
+.mb15 { margin-bottom: 15px; }
+
+.ml20 { margin-left: 20px; }
+.mr20 { margin-right: 20px; }
+.mt20 { margin-top: 20px; }
+.mb20 { margin-bottom: 20px; }
+
+.mt22 { margin-top: 22px;}
+.mb22 { margin-bottom: 22px;}
+
+.mt30 { margin-top: 30px; }
+.mt50 { margin-top: 50px; }
+
+.width100 { width: 100px; }
+.width120 { width: 120px; }
+.width500 { width: 500px; }
+
+.height40 { height: 40px; }
+
+.color__primary { color: #007FFF; }
+.color__info_e1 { color: #E1E1E1; }
+.color__info_be { color: #BEBEBE; }
+.color__info_51 { color: #515151; }
+.color__info_error { color: #E63030; }
+.color__info_success { color: #58bf4c; }
+
+.bg__success { background: #58bf4c !important; }
+.bg__warning { background: #fed109 !important; }
+.bg__error { background: #f4533b !important; }
+
+.block { display: block; }
+.inline__block { display: inline-block;}
+
+.textalign__center { text-align: center;}
+
+.font__size_12 { font-size: 12px; }
+.font__size_14 { font-size: 14px; }
+.font__size_16 { font-size: 16px; }
+.font__size_36 { font-size: 36px; }
+
+.cursor__disabled { cursor: no-drop !important; opacity: 0.5; }
+.cursor_pointer { cursor: pointer; }
+.userselect_none { user-select: none; }
+.ihandle_tool_item { cursor: pointer; color: #007FFF !important; }
+

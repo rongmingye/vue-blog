@@ -15,7 +15,7 @@
 		</div>
 
 		<el-table :data="manageList" style="width: 100%">
-		    <el-table-column prop="art_title" label="标题" v-if="type=='article'"></el-table-column>
+		    <el-table-column prop="title" label="标题" v-if="type=='article'"></el-table-column>
 		    <el-table-column prop="colletion_title" label="标题" v-if="type=='colletion'"></el-table-column>
 
 		    <el-table-column fixed="right" label="操作" width="100">

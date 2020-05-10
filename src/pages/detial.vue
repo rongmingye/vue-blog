@@ -3,21 +3,21 @@
 <template>
 	<div id="detial">
 		<div class="title">
-			<h3>{{article.art_title}}</h3>
+			<h3>{{article.title}}</h3>
 			<div class="meta">
-				<span>{{article.art_timer}}</span>
-				<span>publish by {{article.art_author}}</span>
-				<span>浏览 {{article.read_num}}</span>
+				<span>{{article.createTime}}</span>
+				<span>publish by {{article.author}}</span>
+				<span>浏览 {{article.readNum}}</span>
 			</div>
 		</div>
-		<div class="content" v-html="article.art_content"></div>
+		<div class="content" v-html="article.content"></div>
 	</div>
 </template>
 
 <script>
 import {getArticleById} from '../config/api.js'
 import {addReadNum} from '../config/api.js'
-import {articleFormat} from '../config/util.js'
+import {articleFormat} from '../common/util.js'
 
 	export default {
 		data(){
@@ -39,7 +39,7 @@ import {articleFormat} from '../config/util.js'
 				}
 				this.$http.post(getArticleById, params).then(res=>{
 					this.article = res.data.result;
-					this.article.art_content = articleFormat(res.data.result.art_content);
+					this.article.content = articleFormat(res.data.result.content);
 				}).catch(err=>{
 					console.log(err);
 				})
