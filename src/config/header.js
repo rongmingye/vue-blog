@@ -11,7 +11,7 @@ export let header = {
         return data
     }],
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'json',
     },
     timeout: 60*1000*5, // 5分钟
     responseType: 'json'

@@ -22,7 +22,7 @@
 		},
 		mounted: function(){
 			this.$nextTick(function(){
-				this.getColletionList();
+				// this.getColletionList();
 			})
 		},
 		methods: {

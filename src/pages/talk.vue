@@ -11,7 +11,7 @@
 <script>
 	import { getArticleList } from '../config/api.js'
 	import articleItem from '../components/articleItem.vue'
-	import mockJson from '../assets/articleList.json'
+	import mockJson from '../common/articleList.json'
 
 
 	export default {

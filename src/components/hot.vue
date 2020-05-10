@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import articleList from '../assets/articleList.json'
+import articleList from '../common/articleList.json'
 import {getHotArticle} from '../config/api.js'
 
 export default {
@@ -24,18 +24,16 @@ export default {
 			hotList: []
 		}
 	},
-	mounted: function(){
-		this.$nextTick(function(){
-			this.getHotArticle();
-		})
+	created: function(){
+		// this.getArticleList();
 	},
 	methods: {
 		// 获取热门文章标题列表
-		getHotArticle: function(){
+		getArticleList: function(){
 			var params = {
 				hot: true
 			}
-			this.$http.post(getHotArticle, params).then(res=>{
+			this.$http.db_getArticleList(params).then(res=>{
 				this.hotList = res.data.result;
 			}).catch(err=>{
 				console.log(err);
