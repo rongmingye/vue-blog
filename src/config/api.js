@@ -1,33 +1,33 @@
 import axios from './axios.js'
 import { header } from './header.js'
 
-export const Api = {
+export default {
 	// 通过type获取文章列表 // 所有，热门
-	getArticleList: function() { 
-		axios.get('artile/list', header); 
+	db_getArticleList: function() { 
+		return axios.get('article/list', header); 
 	},
 	// 通过id获取文章 
 	getArticleById: function(articleId) { 
-		axios.get(`article/detail/${articleId}`, header); 
+		return axios.get(`article/detail/${articleId}`, header); 
 	},
 	//查询所有文章, 时间排序 
 	getArticleListByDate: function() { 
-		axios.get('getArticleListByDate', header); 
+		return axios.get('getArticleListByDate', header); 
 	},
 	// 发布文章 
 	publishArticle: function(data) { 
-		axios.get('article/public', data, header); 
+		return axios.get('article/public', data, header); 
 	},
 	// 修改文章 
 	updateArticle: function(articleId, data) {
-		axios.get(`article/update/${articleId}`, data, header);
+		return axios.get(`article/update/${articleId}`, data, header);
 	},
 	// 删除文章 
 	deleteData: function(articleId) { 
-		axios.get(`article/delete/${articleId}`, { articleId }, header); 
+		return axios.get(`article/delete/${articleId}`, { articleId }, header); 
 	},
 	//阅读数量加一 
 	addReadNum: function(articleId) { 
-		axios.post('addReadNum', { articleId }, header);
+		return axios.post('addReadNum', { articleId }, header);
 	},
 }

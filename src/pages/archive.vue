@@ -23,7 +23,7 @@
 		},
 		mounted: function(){
 			this.$nextTick(function(){
-				this.getArticleListByDate();
+				// this.getArticleListByDate();
 			})
 		},
 		methods: {

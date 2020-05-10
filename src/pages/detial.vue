@@ -27,8 +27,8 @@ import {articleFormat} from '../common/util.js'
 		},
 		mounted: function(){
 			this.$nextTick(function(){
-				this.getArticleData();
-				this.addReadNum();
+				// this.getArticleData();
+				// this.addReadNum();
 			})
 		},
 		methods: {

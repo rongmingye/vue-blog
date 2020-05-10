@@ -12,7 +12,7 @@
 
 <script>
 import articleItem from '../components/articleItem.vue'
-import mockJson from '../assets/articleList.json'
+import mockJson from '../common/articleList.json'
 import {getArticleList} from '../config/api.js'
 
 export default {
@@ -24,16 +24,14 @@ export default {
 		}
 	},
 	created: function() {
-		// this.getArticles();
+		this.getArticleList();
 	},
 	methods: {
 		// 获取文章列表
-		getArticles: function(){
-			var params = {
-				type: "home"
-			}
-			this.$http.post(getArticleList, params).then((res)=>{
-				this.articleList = res.data.result;
+		getArticleList: function(){
+			this.$http.db_getArticleList().then((res)=>{
+				let data = JSON.parse(res);				
+				this.articleList = data.articleList;
 			}).catch(err=>{
 				console.log(err);
 			})
