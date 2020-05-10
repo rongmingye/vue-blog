@@ -134,11 +134,11 @@ function router(app){
 	app.post('/addReadNum', urlencodeParser, function(req, res){
 		console.log('addReadNum');
 		var request = req.body;
-		var sql = "select read_num from article where id='"+request.id+"'";
+		var sql = "select readNum from article where id='"+request.id+"'";
 		query(sql, function(err, result){
 			if(err){ console.log(err); }
 			console.log(result);
-			var sql2 = "update article set read_num ='"+parseInt(result[0].read_num+1)+"' where id='"+request.id+"'";
+			var sql2 = "update article set readNum ='"+parseInt(result[0].readNum+1)+"' where id='"+request.id+"'";
 			query(sql2, function(err, result){
 				var data = {
 					code: 1,

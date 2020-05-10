@@ -4,8 +4,8 @@
 	<div id="archive">
 		<ul>
 			<li v-for="item in articleList" class="date-article">
-				<i class="el-icon-success ic"></i><span class="date">{{item.art_timer}}</span>
-				<router-link :to="'/detial/'+item.id" class="title">{{item.art_title}}</router-link>
+				<i class="el-icon-success ic"></i><span class="date">{{item.createTime}}</span>
+				<router-link :to="'/detial/'+item.id" class="title">{{item.title}}</router-link>
 			</li>
 		</ul>
 		

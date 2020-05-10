@@ -21,7 +21,7 @@ api
 	热门文章：展示热门文章的标题，点击热门文章标题，根据文章的id进入详细页面
 
 一个文章字段
- artical_id art_title art_desc art_content read_num art_author art_timer art_type is_host tags
+ artical_id title description content readNum author createTime art_type is_host tags
 
  第二阶段
  	发布评论

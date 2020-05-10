@@ -1,8 +1,8 @@
-[
-	{"art_id":1, "art_title":"react-router", "art_desc": "desc1", "art_content":"conent1",
-		"timer": "2018-09-01", "art_author": "rmy", "read_num": 1, "tags": ["vue", "前端", "javascript"]},
-	{"art_id":2, "art_title":"vue-router", "art_desc": "desc2", "art_content":"conent2",
-		"timer": "2018-09-01", "art_author": "rmy", "read_num": 1, "tags": ["vue", "前端", "javascript"]},
-	{"art_id":3, "art_title":"promise", "art_desc": "desc3", "art_content":"conent3",
-		"timer": "2018-09-01", "art_author": "rmy", "read_num": 1, "tags": ["vue", "前端", "javascript"]}
-]
+{
+	"articleList": 
+		[
+			{"id":1, "type": 1, "title":"react-router", "description": "desc1", "content":"conent1", "createTime": "2018-09-01", "author": "rmy", "readNum": 1, "tags": ["vue", "前端", "javascript"], "praise": 1 },
+			{"id":2, "type": 1, "title":"vue-router", "description": "desc2", "content":"conent2", "createTime": "2018-09-01", "author": "rmy", "readNum": 1, "tags": ["vue", "前端", "javascript"], "praise": 1 },
+			{"id":3, "type": 2, "title":"promise", "description": "desc3", "content":"conent3", "createTime": "2018-09-01", "author": "rmy", "readNum": 1, "tags": ["vue", "前端", "javascript"], "praise": 1 }
+		]
+}

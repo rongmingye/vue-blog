@@ -8,7 +8,7 @@ function routerManage(app){
 	app.post('/publishArticle', urlencodeParser, function(req, res){
 		console.log('publishArticle');
 		var request = req.body;
-		var sql = "insert into article(art_title, art_desc, art_content, art_type, art_timer, art_author, is_hot, tags) values ('" 
+		var sql = "insert into article(title, description, content, art_type, createTime, author, is_hot, tags) values ('" 
 		+request.title+"','"+request.desc+"','"+request.content+"','"+request.type+"','"
 		+date.currentDate()+"','O叶','"+request.hot+"','"+JSON.stringify(request.tags)+"')";
 		query(sql, function(err, result){
@@ -87,11 +87,11 @@ function routerManage(app){
 	app.post('/updateArticle', urlencodeParser, function(req, res){
 		console.log('updateArticle');
 		var request = req.body;
-		var sql = "update article set art_title='"+request.title
-		+ "',art_desc='"+request.desc
-		+ "',art_content='"+request.content
+		var sql = "update article set title='"+request.title
+		+ "',description='"+request.desc
+		+ "',content='"+request.content
 		+ "',art_type='"+request.type
-		+ "',art_author='O叶',is_hot='"+request.hot
+		+ "',author='O叶',is_hot='"+request.hot
 		+ "',tags='"+JSON.stringify(request.tags)+"' where id = '" + request.id + "'";
 		query(sql, function(err, result){
 			if(err){ console.log(err); }

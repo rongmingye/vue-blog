@@ -1,18 +1,33 @@
-const baseUrl = "http://localhost:8081";
+import axios from './axios.js'
+import { header } from './header.js'
 
-module.exports = {
-	getArticleList: baseUrl+'/getArticleList', // 通过type获取文章列表
-	getArticleById: baseUrl+'/getArticleById', // 通过id获取文章
-	getHotArticle: baseUrl+'/getHotArticle', // 热门文章
-	getArticleListByDate: baseUrl+'/getArticleListByDate', //查询所有文章, 时间排序
-	getColletionList: baseUrl+'/getColletionList', // 获取收藏列表
-	addReadNum: baseUrl+ '/addReadNum',//阅读数量加一
-
-	publishArticle: baseUrl+"/publishArticle", // 发布文章
-	publishColletion: baseUrl+"/publishColletion", // 发布收藏
-	getManageData: baseUrl+"/getManageData", // 获取管理的文章
-	deleteData: baseUrl+"/deleteData", // 删除文章
-	updateArticle: baseUrl+"/updateArticle", // 修改文章
-	updateColletion: baseUrl+"/updateColletion", // 修改收藏
-	getColletionById: baseUrl+'/getColletionById', // 通过id获取收藏
+export const Api = {
+	// 通过type获取文章列表 // 所有，热门
+	getArticleList: function() { 
+		axios.get('artile/list', header); 
+	},
+	// 通过id获取文章 
+	getArticleById: function(articleId) { 
+		axios.get(`article/detail/${articleId}`, header); 
+	},
+	//查询所有文章, 时间排序 
+	getArticleListByDate: function() { 
+		axios.get('getArticleListByDate', header); 
+	},
+	// 发布文章 
+	publishArticle: function(data) { 
+		axios.get('article/public', data, header); 
+	},
+	// 修改文章 
+	updateArticle: function(articleId, data) {
+		axios.get(`article/update/${articleId}`, data, header);
+	},
+	// 删除文章 
+	deleteData: function(articleId) { 
+		axios.get(`article/delete/${articleId}`, { articleId }, header); 
+	},
+	//阅读数量加一 
+	addReadNum: function(articleId) { 
+		axios.post('addReadNum', { articleId }, header);
+	},
 }
