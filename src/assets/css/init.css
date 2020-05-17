@@ -90,8 +90,9 @@ button:active {
 }
 
 *::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    /* width: 4px;
+    height: 4px; */
+    display: none;
 }
 
 *::-webkit-scrollbar-track {

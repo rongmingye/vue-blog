@@ -48,7 +48,5 @@ export default {
   box-shadow: 0 1px 1px #ccc;
   background: #fff;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
 </style>

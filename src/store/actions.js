@@ -1,5 +1,6 @@
 export default {
-    func: function(context, data) {
-        
+    initData: function(context) {
+        context.commit('getArticleList');  
+        context.commit('getMusicList');  
     },
 }
