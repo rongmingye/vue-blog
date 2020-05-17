@@ -12,30 +12,20 @@
 
 <script>
 import articleItem from '../components/articleItem.vue'
-import mockJson from '../common/articleList.json'
-import {getArticleList} from '../config/api.js'
 
 export default {
 	name: 'home',
 	components: { articleItem },
 	data(){
 		return {
-			articleList: mockJson.articleList
+			articleList: []
 		}
 	},
 	created: function() {
-		this.getArticleList();
+		this.$store.dispatch('initData')
 	},
 	methods: {
-		// 获取文章列表
-		getArticleList: function(){
-			this.$http.db_getArticleList().then((res)=>{
-				let data = JSON.parse(res);				
-				this.articleList = data.articleList;
-			}).catch(err=>{
-				console.log(err);
-			})
-		}
+		
 	}
 }
 </script>

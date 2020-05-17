@@ -20,6 +20,19 @@ let mockApiList = [
               },
         ]
     }),
+    Mock.mock(env.serveHost + '/music/list', {
+        'articleList|1-10': [
+            {
+                'id|+1': 1,
+                'type': 'string',
+                'createTime': '@datetime',
+                'name': '葡萄成熟时',
+                'description': '描述',
+                'url': '',
+                'author': '作者',
+              },
+        ]
+    })
 ]
 
 export default mockApiList;
