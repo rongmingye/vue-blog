@@ -18,8 +18,10 @@ export default {
 	components: { articleItem },
 	data(){
 		return {
-			articleList: []
+			articleList: this.$store.state.articleList || []
 		}
+	},
+	computed: {
 	},
 	created: function() {
 		this.$store.dispatch('initData')

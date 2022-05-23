@@ -1,30 +1,22 @@
-// 创建项目时间 2018/08/30
 
-let express = require('express');
-let app = express();
-let cors = require('cors');
+import app from './app'
+import routers from './routers'
 
-let router = require('./router.js');
-let routerManage = require('./routerManage.js');
+require("@babel/register")({
+    presets: ["@babel/preset-env"]
+})
 
- app.use(cors({
-    credentials: true, 
-    origin: "http://localhost:8080" 
-}));
+routers(app)
 
-app.use(express.static(__dirname));
-router(app);
-routerManage(app);
-
-var developState = "/public"; //开发时是"/public", 打包后用"/build"
+let developState = "/public"; //开发时是"/public", 打包后用"/build"
 
 // 所有的请求都回到index页面
 app.get('/', function(req, res){
     res.sendFile(__dirname+developState+'/index.html');
 });
 
-var server = app.listen(8081, '0.0.0.0', function(){
-	var host = server.address().address;
-    var port = server.address().port;
+let server = app.listen(8081, '0.0.0.0', function(){
+	let host = server.address().address;
+    let port = server.address().port;
     console.log("http://%s:%s", host, port);
 })

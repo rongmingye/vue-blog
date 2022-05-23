@@ -3,7 +3,7 @@ import { header, header_file } from './header.js'
 
 export default {
 	// 通过type获取文章列表 // 所有，热门
-	db_getArticleList: function () {
+	getArticleList: function () {
 		return axios.get('article/list', header);
 	},
 	// 通过id获取文章 
@@ -33,13 +33,13 @@ export default {
 
 	/* 音乐库 */
 
-	db_getMusicList: function () {
+	getMusicList: function () {
 		return axios.get('music/list', header);
 	},
-	db_addMusic: function () {
+	addMusic: function () {
 
 	},
-	db_deleteMusic: function () {
+	deleteMusic: function () {
 
 	},
 }
