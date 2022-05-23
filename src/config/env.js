@@ -3,7 +3,7 @@ let env = {
         serveHost: "https://rongmingye.com",
     },
     dev: {
-        serveHost: "http://localhost:8090",
+        serveHost: "http://localhost:8081",
     }
 }
 

@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router.js';
 import Api from './config/api.js';
 import store from './store/index.js';
-import mockApiList from'./common/mock'
+// import mockApiList from'./common/mock'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
