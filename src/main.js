@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router.js';
-import Api from './config/api.js';
+import Api from './api/index.js';
 import store from './store/index.js';
-// import mockApiList from'./common/mock'
+import mockApiList from'./common/mock'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import './assets/css/init.css';
-import './assets/css/global.css';
+import 'style/init.css';
+import 'style/global.css';
 
 Vue.config.productionTip = false;
 

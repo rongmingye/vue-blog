@@ -1,5 +1,4 @@
-import Api from '../config/api.js';
-
+import Api from '@/api/index.js';
 
 export default {
     getArticleList: function(state, params) {

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-	import {getManageData} from '../config/api.js'
-	import {deleteData} from '../config/api.js'
+	import {getManageData} from '@/api/index.js'
+	import {deleteData} from '@/api/index.js'
 	
 	export default {
 		data(){

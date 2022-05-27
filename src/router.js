@@ -1,32 +1,24 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-
-import home from './pages/home.vue';
-import talk from './pages/talk.vue';
-import colletion from './pages/colletion.vue';
-import archive from './pages/archive.vue';
-import about from './pages/about.vue';
-import detial from './pages/detial.vue';
-
-import publishArticle from './pages/publishArticle.vue';
-import publishColletion from './pages/publishColletion.vue';
-import manage from './pages/manage.vue';
+import publishArticle from '@/pages/publishArticle.vue';
+import publishColletion from '@/pages/publishColletion.vue';
+import manage from '@/pages/manage.vue';
 
 Vue.use(Router);
 
 export default new Router({
-	mode: 'history',
+	mode: 'hash',
 	routes: [
-		{path: '/', redirect: "/home"},
-		{path: '/home', component: home},
-		{path: '/talk', component: talk},
-		{path: '/colletion', component: colletion},
-		{path: '/archive', component: archive},
-		{path: '/about', component: about},
-		{path: '/detial/:id', component: detial},
+		{ path: '/', redirect: "/home" },
+		{ path: '/home', component: () => import('@/pages/home/home.vue') },
+		{ path: '/talk', component: () => import('@/pages/talk/talk.vue') },
+		{ path: '/colletion', component: () => import('@/pages/colletion/colletion.vue') },
+		{ path: '/archive', component: () => import('@/pages/archive/archive.vue') },
+		{ path: '/about', component: () => import('@/pages/about/about.vue') },
+		{ path: '/detail/:id', component: () => import('@/pages/detail/detail.vue') },
 
-		{path: '/publishArticle', component: publishArticle},
-		{path: '/publishColletion', component: publishColletion},
-		{path: '/manage', component: manage}
+		{ path: '/publishArticle', component: publishArticle },
+		{ path: '/publishColletion', component: publishColletion },
+		{ path: '/manage', component: manage}
 	]
 })

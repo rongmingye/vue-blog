@@ -8,9 +8,9 @@
       </el-header>
 
       <el-container style="margin: 80px 100px 0 100px;">
-        <el-main width="800px">
+        <div class="main" width="800px">
           <router-view></router-view>
-        </el-main>
+        </div>
 
         <el-aside width="250px" style="margin-left: 20px">
           <Hot />
@@ -47,6 +47,9 @@ export default {
   text-align: center;
   box-shadow: 0 1px 1px #ccc;
   background: #fff;
+}
+.main {
+  width: 800px;
 }
 
 </style>

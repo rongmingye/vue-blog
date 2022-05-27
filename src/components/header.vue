@@ -1,6 +1,6 @@
 <template>
 	<div class="clearfix" style="height: 100%;">
-		<h3 style="float: left; width: 20vw; font-size: 24px">O叶</h3>
+		<h3 style="float: left; width: 20vw; font-size: 24px">kervin</h3>
 		<ul class="nav" style="float: left;">
 			<li v-for="(item, index) in nav" :key="index" :class="{active: selectedIndex == index}" @click="selectNav(index)">
 				<router-link :to="item.path">{{item.title}}</router-link>		
