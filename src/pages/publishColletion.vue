@@ -25,9 +25,7 @@
 </template>
 
 <script>
-	import {publishColletion} from '../config/api.js'
-	import {getColletionById} from '../config/api.js'
-	import {updateColletion} from '../config/api.js'
+	import { publishColletion, getColletionById, updateColletion } from '@/api/index.js'
 
 	export default {	
 		mounted: function(){

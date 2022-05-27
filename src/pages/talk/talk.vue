@@ -9,13 +9,13 @@
 </template>
 
 <script>
-	import { getArticleList } from '../config/api.js'
-	import articleItem from '../components/articleItem.vue'
-	import mockJson from '../common/articleList.json'
+	import { getArticleList } from '@/api/index.js'
+	import articleItem from '@/components/articleItem.vue'
+	import mockJson from '@/common/articleList.json'
 
 
 	export default {
-		components: {articleItem},
+		components: { articleItem },
 		data(){
 			return {
 				articleList: mockJson.articleList

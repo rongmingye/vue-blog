@@ -4,7 +4,7 @@
 			<div slot="header" class="clearfix">
 			    <span>热门</span>
 			</div>
-			<div v-for="(item, i) in hotList">
+			<div v-for="(item, i) in hotList" :key="i">
 				<router-link :to="'/detial/'+item.id" class="text" >
 					<i>{{i+1}}</i> 、{{item.title}}
 				</router-link>
@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import articleList from '../common/articleList.json'
-import {getHotArticle} from '../config/api.js'
 
 export default {
 	name: 'hot',

@@ -40,10 +40,8 @@
 </template>
 
 <script>
-	import {publishArticle} from '../config/api.js'
-	import {getArticleById} from '../config/api.js'
-	import {updateArticle} from '../config/api.js'
-	import {danyinhao} from '../common/util.js'
+	import {publishArticle, getArticleById, updateArticle} from '@/api/index.js'
+	import {danyinhao} from '@/common/util.js'
 
 	export default {
 		mounted: function(){
