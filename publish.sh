@@ -12,6 +12,6 @@ git pull
 npm run build
 
 # 将打包目录复制到线上目录
-cp -r ./dist/ /usr/project_online/fe/vue-blog/
+cp -r ./dist/* /usr/project_online/fe/vue-blog/
 
 echo "publish success"
