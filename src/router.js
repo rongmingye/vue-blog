@@ -1,8 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import publishArticle from '@/pages/publishArticle.vue';
-import publishColletion from '@/pages/publishColletion.vue';
-import manage from '@/pages/manage.vue';
 
 Vue.use(Router);
 
@@ -17,8 +14,8 @@ export default new Router({
 		{ path: '/about', component: () => import('@/pages/about/about.vue') },
 		{ path: '/detail/:id', component: () => import('@/pages/detail/detail.vue') },
 
-		{ path: '/publishArticle', component: publishArticle },
-		{ path: '/publishColletion', component: publishColletion },
-		{ path: '/manage', component: manage}
+		{ path: '/publishArticle', component: import('@/pages/manage/publishArticle.vue') },
+		{ path: '/publishColletion', component: import('@/pages/manage/publishColletion.vue') },
+		{ path: '/manage', component: import('@/pages/manage/manage.vue')}
 	]
 })
