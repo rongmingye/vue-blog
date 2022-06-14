@@ -11,7 +11,10 @@ git pull
 # 打包
 npm run build
 
-# 将打包目录复制到线上目录
+# 删除旧的生产包
+rm -rf /usr/project_online/fe/vue-blog/*
+
+# 将打包目录复制到生产包
 cp -r ./dist/* /usr/project_online/fe/vue-blog/
 
 echo "publish success"
