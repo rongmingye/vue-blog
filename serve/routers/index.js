@@ -1,6 +1,6 @@
 
 import * as article from './article'
-import  * as collection from './collection'
+import * as collection from './collection'
 
 export function init(app) {
   article.router(app)
