@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "node-build": "babel-node ./serve -d dist-serve",
     "node-dev": "npm run node-build && node ./dist-serve/server.js dev",
-    "node-prod": "node ./serve/server.js prod"
+    "node-prod": "npm run node-build && node ./dist-serve/server.js prod"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,6 +20,7 @@
     "cors": "^2.8.4",
     "element-ui": "^2.4.6",
     "express": "^4.16.3",
+    "jsonwebtoken": "^9.0.0",
     "less-loader": "^4.1.0",
     "mockjs": "^1.1.0",
     "morgan": "^1.10.0",

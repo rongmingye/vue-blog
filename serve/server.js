@@ -3,19 +3,23 @@ import express from 'express'
 import cors from 'cors'
 import logger from'morgan'
 import compression from'compression'
+import bodyParser from 'body-parser'
 import routers from'./routers'
 
 const app = express()
 
 // 注册中间件
-app.use(logger())
+app.use(bodyParser.json()); // 解析json数据格式
+app.use(bodyParser.urlencoded({extended: true})); // 解析form表单提交的数据application/x-www-form-urlencoded
+app.use(logger()) // 日志
+// 跨域
 app.use(cors({
     credentials: true, 
     origin: "*" 
 }))
 app.use(express.json()) 
 app.use(express.urlencoded({ extended: true }))
-app.use(compression())
+app.use(compression()) // gzip格式压缩
 app.use(express.static(__dirname))
 
 // babel
@@ -24,7 +28,7 @@ require("@babel/register")({
 })
 
 // 注册路由
-routers.init(app)
+app.use('/', routers);
 
 const env = process.argv.splice(2)
 
