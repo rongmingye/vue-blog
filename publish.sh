@@ -8,6 +8,9 @@ git checkout master
 # 拉取最新代码
 git pull
 
+# 安装依赖
+npm i
+
 # 打包
 npm run build
 
