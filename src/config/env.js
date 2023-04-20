@@ -1,14 +1,14 @@
 let env = {
     prod: {
-        serveHost: "https://rongmingye.com",
+        serveHost: "http://rongmingye.com:8090",
     },
     dev: {
-        serveHost: "http://localhost:8081",
+        serveHost: "http://localhost:8010",
     }
 }
 
 // 选择环境主机
-let hostConfig = env.dev
+let hostConfig = env.prod
 
 export default {
     serveHost: hostConfig.serveHost,

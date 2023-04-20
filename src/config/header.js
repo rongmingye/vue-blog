@@ -4,14 +4,13 @@ import env from './env.js'
 export let header = {
     baseURL: env.serveHost,
     transformRequest: [function (data) {
-        data = Qs.stringify(data)
-        return data;
+        return Qs.stringify(data);
     }],
     transformResponse: [function (data) {
         return data
     }],
     headers: {
-        'Content-Type': 'json',
+        // 'Content-Type': 'json',
     },
     timeout: 60*1000*5, // 5分钟
     responseType: 'json'

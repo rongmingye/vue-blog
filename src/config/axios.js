@@ -15,10 +15,9 @@ axios.interceptors.response.use(
           // 参数不合法！
           break;
       }
-      // 返回接口的错误信息
       return response.data;
     } else {
-      return response.data;
+      return JSON.parse(response.data);
     }
   },
   (error) => {

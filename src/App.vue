@@ -2,36 +2,13 @@
 
 <template>
   <div id="app">
-    <el-container>
-      <el-header class="header">
-        <Header />
-      </el-header>
-
-      <el-container style="margin: 80px 100px 0 100px;">
-        <div class="main" width="800px">
-          <router-view></router-view>
-        </div>
-
-        <el-aside width="250px" style="margin-left: 20px">
-          <Hot />
-        </el-aside>
-      </el-container>
-
-      <el-footer style="text-align: center; font-size: 12px;">
-        <Footer />
-      </el-footer>
-    </el-container>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from "./components/header.vue";
-import Footer from "./components/footer.vue";
-import Hot from "./components/hot.vue";
-
 export default {
   name: "app",
-  components: { Header, Footer, Hot }
 };
 </script>
 
