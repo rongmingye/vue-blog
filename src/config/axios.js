@@ -21,7 +21,7 @@ axios.interceptors.response.use(
     }
   },
   (error) => {
-    Message.warning("服务器发生错误!");
+    // Message.warning("服务器发生错误!");
 
     if (error.response) {
       switch (error.response.status) {

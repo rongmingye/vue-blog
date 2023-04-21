@@ -1,6 +1,6 @@
 let env = {
     prod: {
-        serveHost: "http://rongmingye.com:8090",
+        serveHost: "http://rongmingye.com:8010",
     },
     dev: {
         serveHost: "http://localhost:8010",
